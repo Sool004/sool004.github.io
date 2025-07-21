@@ -1,24 +1,686 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Malla Curricular Ingeniería Civil</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <h1>Malla Curricular Ingeniería Civil</h1>
-  <div id="grid" class="malla-grid"></div>
-
-  <!-- Modal para detalles de materia -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span id="closeBtn" class="close">&times;</span>
-      <h2 id="materiaTitulo"></h2>
-      <p id="materiaDesc"></p>
-      <button id="toggleAprobada">Marcar como aprobada</button>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
-</body>
-</html>
+{
+  "mallaData": [
+    {
+      "año": 1,
+      "periodo": "anual",
+      "materias": []
+    },
+    {
+      "año": 1,
+      "periodo": "Semestre 1",
+      "materias": [
+        {
+          "id": "c0a802e7-e7f9-4584-b520-160634213856",
+          "nombre": "Álgebra ",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 8,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "e7ddf26f-0d25-4f1b-9a6d-7aa5c97b4818",
+          "nombre": "Cálculo I",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 8,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "c07f5ced-7953-4c84-bac3-390fb62b1034",
+          "nombre": "Introducción a la Ingeniería Civil",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 8,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "9bc73b00-7781-4c2f-a52d-b75e31d8c855",
+          "nombre": "Fundamentos Filosóficos",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 4,
+          "requiereCreditos": 0
+        }
+      ]
+    },
+    {
+      "año": 1,
+      "periodo": "Semestre 2",
+      "materias": [
+        {
+          "id": "cd418b89-6cff-40f3-9aa1-7fa784316507",
+          "nombre": "Álgebra Lineal",
+          "tipo": "ninguno",
+          "requisitos": [
+            "c0a802e7-e7f9-4584-b520-160634213856"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "19383ec0-2888-4e5d-aa81-176c2b9bfff8",
+          "nombre": "Cálculo II",
+          "tipo": "ninguno",
+          "requisitos": [
+            "e7ddf26f-0d25-4f1b-9a6d-7aa5c97b4818"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "9896005b-e92b-4860-a2ab-e23953123eeb",
+          "nombre": "Dibujo en Ingeniería ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "c07f5ced-7953-4c84-bac3-390fb62b1034"
+          ],
+          "creditos": 5,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "eb3253c7-1eef-4e91-b483-1947acae20cc",
+          "nombre": "Fundamentos de Estática ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "e7ddf26f-0d25-4f1b-9a6d-7aa5c97b4818"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "5653df60-32b1-4ab5-acb8-3094aaea1148",
+          "nombre": "Química ",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 0
+        }
+      ]
+    },
+    {
+      "año": 2,
+      "periodo": "anual",
+      "materias": []
+    },
+    {
+      "año": 2,
+      "periodo": "Semestre 1",
+      "materias": [
+        {
+          "id": "06602490-3fb9-4121-b430-248aa5217f7e",
+          "nombre": "Calculo III",
+          "tipo": "ninguno",
+          "requisitos": [
+            "19383ec0-2888-4e5d-aa81-176c2b9bfff8"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "0c676f80-0f78-4b4b-950a-add51359f496",
+          "nombre": "Electromagnética y Circuitos",
+          "tipo": "ninguno",
+          "requisitos": [
+            "19383ec0-2888-4e5d-aa81-176c2b9bfff8",
+            "eb3253c7-1eef-4e91-b483-1947acae20cc"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "66c78eb5-e3c3-4292-be3b-b0276ee0b9df",
+          "nombre": "Estática Aplicada ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "19383ec0-2888-4e5d-aa81-176c2b9bfff8",
+            "eb3253c7-1eef-4e91-b483-1947acae20cc"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "41b80e65-49f3-4b89-a3e1-31f56aedebf8",
+          "nombre": "Materiales de Construcción ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "9896005b-e92b-4860-a2ab-e23953123eeb"
+          ],
+          "creditos": 5,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "a014290f-761a-4764-8295-284107037252",
+          "nombre": "Programación Aplicada ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "19383ec0-2888-4e5d-aa81-176c2b9bfff8"
+          ],
+          "creditos": 4,
+          "requiereCreditos": 0
+        }
+      ]
+    },
+    {
+      "año": 2,
+      "periodo": "Semestre 2",
+      "materias": [
+        {
+          "id": "ee4934cc-dc35-4625-be08-9ca6152c36e7",
+          "nombre": "Ecuaciones Diferenciales ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "06602490-3fb9-4121-b430-248aa5217f7e",
+            "cd418b89-6cff-40f3-9aa1-7fa784316507"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "b43e0e1d-f1ff-4f9a-a45c-ea5b974c9f93",
+          "nombre": "Cálculo Numérico ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "19383ec0-2888-4e5d-aa81-176c2b9bfff8",
+            "a014290f-761a-4764-8295-284107037252"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "d410f29a-6946-494c-838c-2a877dd02bdc",
+          "nombre": "Cinemática y Dinámica",
+          "tipo": "ninguno",
+          "requisitos": [
+            "19383ec0-2888-4e5d-aa81-176c2b9bfff8",
+            "eb3253c7-1eef-4e91-b483-1947acae20cc"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "cc821d6e-45a2-4fd3-81ed-cd2170c5b303",
+          "nombre": "Topografía ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "9896005b-e92b-4860-a2ab-e23953123eeb"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "6bcc25bf-5b0a-482a-bb6b-b4b34c181a39",
+          "nombre": "Fundamentos Teológicos ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "9bc73b00-7781-4c2f-a52d-b75e31d8c855"
+          ],
+          "creditos": 4,
+          "requiereCreditos": 0
+        }
+      ]
+    },
+    {
+      "año": 3,
+      "periodo": "anual",
+      "materias": []
+    },
+    {
+      "año": 3,
+      "periodo": "Semestre 1",
+      "materias": [
+        {
+          "id": "ffdcbfec-daf0-44d3-bf4b-556e07cace0c",
+          "nombre": "Probabilidades y Estadisticas",
+          "tipo": "ninguno",
+          "requisitos": [
+            "19383ec0-2888-4e5d-aa81-176c2b9bfff8"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "07b2fe1e-00fd-482e-a8cd-85ce2c8ac944",
+          "nombre": "Termodinámica ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "5653df60-32b1-4ab5-acb8-3094aaea1148",
+            "eb3253c7-1eef-4e91-b483-1947acae20cc"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "72297f03-c8c2-4ae7-8f9e-cd8d8bb5d1c8",
+          "nombre": "Resistencia de Materiales",
+          "tipo": "ninguno",
+          "requisitos": [
+            "66c78eb5-e3c3-4292-be3b-b0276ee0b9df",
+            "ee4934cc-dc35-4625-be08-9ca6152c36e7"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "1310e3bc-f6c0-4105-9795-ceca8d9bf26b",
+          "nombre": "Doctrina Social de la Iglesia",
+          "tipo": "ninguno",
+          "requisitos": [
+            "6bcc25bf-5b0a-482a-bb6b-b4b34c181a39"
+          ],
+          "creditos": 4,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "8f6c2831-bcd8-476c-834c-3032c037c677",
+          "nombre": "Energías y Ondas",
+          "tipo": "ninguno",
+          "requisitos": [
+            "d410f29a-6946-494c-838c-2a877dd02bdc"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        }
+      ]
+    },
+    {
+      "año": 3,
+      "periodo": "Semestre 2",
+      "materias": [
+        {
+          "id": "6923a0f6-a927-4043-8c9d-41d681927cf9",
+          "nombre": "Mecánica de Fluidos",
+          "tipo": "ninguno",
+          "requisitos": [
+            "d410f29a-6946-494c-838c-2a877dd02bdc",
+            "07b2fe1e-00fd-482e-a8cd-85ce2c8ac944"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "8a74b793-bdb7-4201-b8c8-653bc7896269",
+          "nombre": "Análisis de Estructuras",
+          "tipo": "ninguno",
+          "requisitos": [
+            "72297f03-c8c2-4ae7-8f9e-cd8d8bb5d1c8"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "6a6cec84-8627-47ac-aebb-9039fab8cb6d",
+          "nombre": "Optimización ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "cd418b89-6cff-40f3-9aa1-7fa784316507"
+          ],
+          "creditos": 5,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "61b9a6a5-81d0-441b-9026-143575113260",
+          "nombre": "Geología ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "5653df60-32b1-4ab5-acb8-3094aaea1148"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "e72cb24e-dcbd-4a91-8995-ccbc6b04d26d",
+          "nombre": "Ética Empresarial y Social",
+          "tipo": "ninguno",
+          "requisitos": [
+            "1310e3bc-f6c0-4105-9795-ceca8d9bf26b"
+          ],
+          "creditos": 4,
+          "requiereCreditos": 0
+        }
+      ]
+    },
+    {
+      "año": 4,
+      "periodo": "anual",
+      "materias": []
+    },
+    {
+      "año": 4,
+      "periodo": "Semestre 1",
+      "materias": [
+        {
+          "id": "7616cbd2-d4df-481a-ad10-357a354c3183",
+          "nombre": "Economía y Gestión Empresarial ",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 120
+        },
+        {
+          "id": "22d6732f-c2a7-4bba-85e7-2224f396b15e",
+          "nombre": "Ingles I",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "49dc1e68-39e0-4c64-9c67-682d984f3e56",
+          "nombre": "Mecánica de Suelos",
+          "tipo": "ninguno",
+          "requisitos": [
+            "61b9a6a5-81d0-441b-9026-143575113260",
+            "72297f03-c8c2-4ae7-8f9e-cd8d8bb5d1c8"
+          ],
+          "creditos": 7,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "80236a77-19e6-4c47-9116-374fd6cd8940",
+          "nombre": "Hidráulica ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "6923a0f6-a927-4043-8c9d-41d681927cf9"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "b40a6d2b-91a5-4182-b560-f62169817d3c",
+          "nombre": "Dinámica de Esteucturas",
+          "tipo": "ninguno",
+          "requisitos": [
+            "8a74b793-bdb7-4201-b8c8-653bc7896269",
+            "d410f29a-6946-494c-838c-2a877dd02bdc"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        }
+      ]
+    },
+    {
+      "año": 4,
+      "periodo": "Semestre 2",
+      "materias": [
+        {
+          "id": "dc157a00-60d4-4109-a4ab-db9804516f0a",
+          "nombre": "Ingles II",
+          "tipo": "ninguno",
+          "requisitos": [
+            "22d6732f-c2a7-4bba-85e7-2224f396b15e"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "5d730639-2fa5-43dc-af1b-9bd2122a89f6",
+          "nombre": "Hidrología ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "ffdcbfec-daf0-44d3-bf4b-556e07cace0c",
+            "80236a77-19e6-4c47-9116-374fd6cd8940"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "fc6788d6-8665-4b2e-9a4d-b3a4422d11b8",
+          "nombre": "Ingeniería de Transporte",
+          "tipo": "ninguno",
+          "requisitos": [
+            "7616cbd2-d4df-481a-ad10-357a354c3183",
+            "6a6cec84-8627-47ac-aebb-9039fab8cb6d"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "0fd38a22-8c32-4a2a-9e36-cbe7f89df469",
+          "nombre": "Construcción General",
+          "tipo": "ninguno",
+          "requisitos": [
+            "cc821d6e-45a2-4fd3-81ed-cd2170c5b303"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "603e017f-9282-4a01-aff0-d33597bc78f4",
+          "nombre": "Hormigón Armado ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "8a74b793-bdb7-4201-b8c8-653bc7896269"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        }
+      ]
+    },
+    {
+      "año": 5,
+      "periodo": "anual",
+      "materias": []
+    },
+    {
+      "año": 5,
+      "periodo": "Semestre 1",
+      "materias": [
+        {
+          "id": "5d269e3e-5534-434e-82d1-5573f11a5c33",
+          "nombre": "Ingeniería Fluvial y Costera",
+          "tipo": "ninguno",
+          "requisitos": [
+            "80236a77-19e6-4c47-9116-374fd6cd8940",
+            "8f6c2831-bcd8-476c-834c-3032c037c677"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "6e21497e-9b78-43ae-b03e-21c9241c1520",
+          "nombre": "Fundaciones",
+          "tipo": "ninguno",
+          "requisitos": [
+            "49dc1e68-39e0-4c64-9c67-682d984f3e56"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "b294fbbb-0749-4852-9c39-5bd6c66a236b",
+          "nombre": "Estructuras Metálicas ",
+          "tipo": "ninguno",
+          "requisitos": [
+            "8a74b793-bdb7-4201-b8c8-653bc7896269"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "e867f017-3821-412a-b06b-7a9ed3102a5d",
+          "nombre": "Integración de Saberes",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "da2a13f5-7439-4253-b5a1-9d2565ccb781",
+          "nombre": "Optativo de Profundización ",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 0
+        }
+      ]
+    },
+    {
+      "año": 5,
+      "periodo": "Semestre 2",
+      "materias": [
+        {
+          "id": "7d0b644c-fa14-4dd9-8d29-d8c8f7e21eea",
+          "nombre": "Ingeniería Económica ",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 1800
+        },
+        {
+          "id": "75447b18-a6df-4359-b1f4-2d86ed3f16f1",
+          "nombre": "Impacto Ambiental en Ingeniería Civil",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 240
+        },
+        {
+          "id": "7b7f7ffd-63fa-4a02-a2d2-5757f6e79871",
+          "nombre": "Integración de Saberes ",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "f659ea21-d1d4-469e-8196-04245d4f7a48",
+          "nombre": "Optativo de Profundización",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "f1af8324-108a-40fe-ae49-d85c70d0d936",
+          "nombre": "Optativo de Profundización ",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "ae02e6be-7e42-4255-a051-9e02c5d92020",
+          "nombre": "Práctica Profesional (Verano)",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 5,
+          "requiereCreditos": 0
+        }
+      ]
+    },
+    {
+      "año": 6,
+      "periodo": "anual",
+      "materias": []
+    },
+    {
+      "año": 6,
+      "periodo": "Semestre 1",
+      "materias": [
+        {
+          "id": "e48d5230-928b-4c9f-9b12-ff1955f6d06e",
+          "nombre": "Evaluación de Proyectos",
+          "tipo": "ninguno",
+          "requisitos": [
+            "7d0b644c-fa14-4dd9-8d29-d8c8f7e21eea"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "6de7ede6-d703-48fa-a90f-97f6ca9ba16c",
+          "nombre": "Planificación y Control de Obras",
+          "tipo": "ninguno",
+          "requisitos": [
+            "0fd38a22-8c32-4a2a-9e36-cbe7f89df469"
+          ],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "cc373dd9-6b09-4eed-8246-8ac78511079b",
+          "nombre": "Optativo de Profundización ",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "2a9d3656-a664-421c-83bf-fa2a5bc17a06",
+          "nombre": "Optativo de Profundización",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 0
+        },
+        {
+          "id": "472b8fed-df15-42cb-a52f-1344adf72ac1",
+          "nombre": "Optativo de Profundización",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 6,
+          "requiereCreditos": 0
+        }
+      ]
+    },
+    {
+      "año": 6,
+      "periodo": "Semestre 2",
+      "materias": [
+        {
+          "id": "627fdcb6-8e10-4f96-8e61-e3ee93f5e290",
+          "nombre": "Proyecto de Titulo",
+          "tipo": "ninguno",
+          "requisitos": [],
+          "creditos": 0,
+          "requiereCreditos": 0
+        }
+      ]
+    }
+  ],
+  "estructuraPorAnio": [
+    {
+      "tipo": "semestral",
+      "periodos": [
+        "Semestre 1",
+        "Semestre 2"
+      ]
+    },
+    {
+      "tipo": "semestral",
+      "periodos": [
+        "Semestre 1",
+        "Semestre 2"
+      ]
+    },
+    {
+      "tipo": "semestral",
+      "periodos": [
+        "Semestre 1",
+        "Semestre 2"
+      ]
+    },
+    {
+      "tipo": "semestral",
+      "periodos": [
+        "Semestre 1",
+        "Semestre 2"
+      ]
+    },
+    {
+      "tipo": "semestral",
+      "periodos": [
+        "Semestre 1",
+        "Semestre 2"
+      ]
+    },
+    {
+      "tipo": "semestral",
+      "periodos": [
+        "Semestre 1",
+        "Semestre 2"
+      ]
+    }
+  ],
+  "cantidadAnios": 6
+}
